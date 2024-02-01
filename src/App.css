@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.global h1, .country h1{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.google{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgb(86, 211, 230),  rgba(152, 109, 216)) ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+
+.filtro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Puedes ajustar el margen según tus necesidades */
+}
+
+label {
+  margin-right: 5px;
+  margin-left: 30px; /* Espacio entre la etiqueta y el input */
+}
+
+input{
+  height: 24px;
+}
+
+
+.bi-house {
+  width: 1.5em;  
+  height: 1.5em;
+  background-image: url('../public/house-front.png');  
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.bi-list{
+  width: 3.5em;  
+  height: 3.5em;
+  background-image: url('../public/mapa-del-mundo.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+
+a.nav-link, .nav-bar-expand{
+  display: flex;
+  flex-direction: row;
+}
+
+a.nav-link::after {
+  display: none;
+}
+
+.navbar-nav{
+  margin-top: 20px;
+}
+
+.nav-item{
+  margin-top: 7px;
+}
+
+
+
+/* Media query para ajustes en pantallas pequeñas */
+@media (max-width: 768px) {
+  .filtro {
+    flex-direction: column; /* Cambiado a columna para pantallas pequeñas */
   }
-  to {
-    transform: rotate(360deg);
+  
+
+  input {
+    width: 50%; /* Ancho del input del 50% en pantallas pequeñas */
+  }
+
+  .bi-house,
+  .bi-list {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  a.nav-link,
+  .nav-bar-expand {
+    flex-direction: column; /* Cambiado a columna para pantallas pequeñas */
+    align-items: center;
+  }
+
+  
+  canvas {
+    padding-bottom: 80px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 60px;
   }
 }
