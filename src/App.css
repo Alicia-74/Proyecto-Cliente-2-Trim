@@ -71,10 +71,21 @@ a.nav-link::after {
   margin-top: 20px;
 }
 
-.nav-item{
-  margin-top: 7px;
+
+#basic-nav-dropdown {
+  font-weight:400;
+  font-size: 20px;
+  color: black;
 }
 
+.dropdown{
+  padding-top: 0px;
+}
+
+.custom-dropdown .dropdown-menu {
+  top: 100%;
+  left: 0;
+}
 
 
 /* Media query para ajustes en pantallas pequeñas */
